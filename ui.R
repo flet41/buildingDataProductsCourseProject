@@ -2,7 +2,7 @@
 #UI.R
 library(shiny)
 shinyUI(fluidPage(
-  titlePanel("Mtcars dataset"),
+  titlePanel("Interactive Exploratory Plotting Tool-Mtcars Dataset"),
   sidebarLayout(
     sidebarPanel(
       radioButtons("x", "Select X-axis:",
@@ -11,7 +11,13 @@ shinyUI(fluidPage(
                    list("mpg"="l","cyl"="m", "disp"="n", "hp"="o", "drat"="p", "wt"="q", "qsec"="r", "vs"="s", "am"="t", "gear"="u", "carb"="v"))
     ),
     mainPanel(
-      plotOutput("distPlot")
+      plotOutput("distPlot"), 
+      h2("Documentation"),
+      h4("This is an interative plotting tool that will allow you to perform initial exploratory analysis on the mtcars dataset.
+
+Instead of having to write code for every exploratory plot, the user can simply select the variables they would like to view.  "),
+      h5("https://flet41.shinyapps.io/course_project-building_data_products/")
+      
     )
   )
 ))
